@@ -24,7 +24,7 @@ namespace InsertionSort
             //var input = Enumerable.Range(1, 100).Shuffle().ToArray();
             var input = new[] {8, 2, 4, 2, 9};
 
-            var output = input.Sort(new InsertionAlgorith()).ToArray();
+            var output = input.Sort(new ImprovedInsertionAlgorith<int>()).ToArray();
 
             Assert.AreEqual(input.Sum(), output.Sum());
             

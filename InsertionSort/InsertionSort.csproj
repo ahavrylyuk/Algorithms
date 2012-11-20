@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="ImprovedInsertionAlgorith.cs" />
     <Compile Include="InsertionAlgorith.cs" />
     <Compile Include="ISortAlgorith.cs" />
     <Compile Include="Program.cs" />
