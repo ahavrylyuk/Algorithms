@@ -1,0 +1,13 @@
+<Project
+    DefaultTargets="Test"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+    AssemblyFile="$(SolutionDir)packages\xunit.1.9.1\lib\net20\xunit.runner.msbuild.dll"
+    TaskName="Xunit.Runner.MSBuild.xunit" />
+
+  <Target Name="Test" AfterTargets="Build">
+    <xunit Assembly="$(TargetPath)" Html="$(ProjectDir)xUnit.Results.html" />
+  </Target>
+
+</Project>
