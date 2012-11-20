@@ -4,8 +4,6 @@ namespace InsertionSort
 {
     internal class InsertionAlgorith : ISortAlgorith<int>
     {
-        
-
         public IEnumerable<int> SortInplace(int[] source)
         {
             for (var i = 1; i < source.Length; i++)
