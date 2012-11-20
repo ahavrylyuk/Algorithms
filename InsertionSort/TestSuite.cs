@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace InsertionSort
 {
     [TestFixture]
-    class TestSuite
+    public class TestSuite
     {
         [Test]
         public void TestShuffle()
@@ -19,15 +19,30 @@ namespace InsertionSort
         }
 
         [Test]
-        public void TestInsertionSort()
+        public void TestInsertionSortOnUnsorted()
         {
-            //var input = Enumerable.Range(1, 100).Shuffle().ToArray();
-            var input = new[] {8, 2, 4, 2, 9};
+            var input = Enumerable.Range(1, 100).Shuffle().ToArray();
+            //var input = new[] {8, 2, 4, 2, 9};
 
             var output = input.Sort(new ImprovedInsertionAlgorith<int>()).ToArray();
 
             Assert.AreEqual(input.Sum(), output.Sum());
             
+            for (var i = 0; i < output.Length - 1; i++)
+            {
+                Assert.GreaterOrEqual(output[i + 1], output[i]);
+            }
+        }
+
+        [Test]
+        public void TestInsertionSortOnSorted()
+        {
+            var input = Enumerable.Range(1, 100).ToArray();
+            
+            var output = input.Sort(new ImprovedInsertionAlgorith<int>()).ToArray();
+
+            Assert.AreEqual(input.Sum(), output.Sum());
+
             for (var i = 0; i < output.Length - 1; i++)
             {
                 Assert.GreaterOrEqual(output[i + 1], output[i]);
