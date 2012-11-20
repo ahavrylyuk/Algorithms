@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace InsertionSort
 {
-    internal class ImprovedInsertionAlgorith<T> : ISortAlgorith<T>
+    public class ImprovedInsertionAlgorith<T> : ISortAlgorith<T>
     {
         #region ISortAlgorith<T> Members
 

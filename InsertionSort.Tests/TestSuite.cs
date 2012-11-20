@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 #endregion
 
-namespace InsertionSort
+namespace InsertionSort.Tests
 {
     [TestFixture]
     public class TestSuite
