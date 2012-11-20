@@ -1,8 +1,0 @@
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\bin\Debug\InsertionSort.exe.config
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\bin\Debug\InsertionSort.exe
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\bin\Debug\InsertionSort.pdb
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\bin\Debug\nunit.framework.dll
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\bin\Debug\nunit.framework.xml
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\obj\Debug\InsertionSort.csprojResolveAssemblyReference.cache
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\obj\Debug\InsertionSort.exe
-h:\Docs\Visual Studio 2012\Projects\Algorithms\InsertionSort\InsertionSort\obj\Debug\InsertionSort.pdb
