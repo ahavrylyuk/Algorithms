@@ -8,12 +8,9 @@ namespace InsertionSort
 {
     internal class ImprovedInsertionAlgorith<T> : ISortAlgorith<T>
     {
-        public IEnumerable<T> Sort(T[] source)
-        {
-            return SortInplace(source);
-        }
+        #region ISortAlgorith<T> Members
 
-        public IEnumerable<T> SortInplace(T[] source)
+        public IEnumerable<T> SortAscending(T[] source)
         {
             for (var i = 1; i < source.Length; i++)
             {
@@ -26,5 +23,21 @@ namespace InsertionSort
             }
             return source;
         }
+
+        public IEnumerable<T> SortDescending(T[] source)
+        {
+            for (var i = source.Length - 2; i >= 0; i--)
+            {
+                var value = source[i];
+                for (var j = i + 1; j < source.Length && Comparer<T>.Default.Compare(source[j], value) > 0; )
+                {
+                    source[j - 1] = source[j++];
+                    source[j - 1] = value;
+                }
+            }
+            return source;
+        }
+
+        #endregion
     }
 }

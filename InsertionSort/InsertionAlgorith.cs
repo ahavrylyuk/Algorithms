@@ -4,10 +4,7 @@ namespace InsertionSort
 {
     internal class InsertionAlgorith : ISortAlgorith<int>
     {
-        public IEnumerable<int> Sort(int[] source)
-        {
-            return SortInplace(source);
-        }
+        
 
         public IEnumerable<int> SortInplace(int[] source)
         {
@@ -26,6 +23,16 @@ namespace InsertionSort
                 }
             }
             return source;
+        }
+
+        public IEnumerable<int> SortAscending(int[] source)
+        {
+            return SortInplace(source);
+        }
+
+        public IEnumerable<int> SortDescending(int[] source)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

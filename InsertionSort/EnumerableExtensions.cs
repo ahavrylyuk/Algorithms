@@ -6,9 +6,12 @@ namespace InsertionSort
 {
     public static class EnumerableExtensions
     {
-        public static IEnumerable<T> Sort<T>(this IEnumerable<T> source, ISortAlgorith<T> algorith, bool inplace = false)
+        public static IEnumerable<T> Sort<T>(this IEnumerable<T> source, ISortAlgorith<T> algorith, SortDirection direction = SortDirection.Asc)
         {
-            return inplace ? algorith.SortInplace(source.ToArray()) : algorith.Sort(source.ToArray());
+            var input = source.ToArray();
+            return direction == SortDirection.Asc
+                       ? algorith.SortAscending(input)
+                       : algorith.SortDescending(input);
         }
 
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> range)
